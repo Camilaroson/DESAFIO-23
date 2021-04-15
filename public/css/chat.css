@@ -1,0 +1,45 @@
+
+#Mostrarmensajes{
+    background-color: white;
+    width: auto;
+    height: 200px;
+    overflow: scroll;
+    margin-top: 10px;
+    
+    
+}
+.chat{
+    width: 500px;
+    padding: 1em;
+    border: 1px solid rgb(45, 60, 88);
+    border-radius: 1em;
+    margin-bottom: 5em;
+
+}
+
+.email{
+    color:blue;
+    font-weight: bold;
+
+}
+.hora{
+color: brown;
+}
+
+.message{
+font-style: italic;
+color:green;
+}
+
+
+.container{
+    text-align: center;
+    margin-top: 2%;
+    padding: 1em;
+}
+
+input{
+  margin: 10px
+     
+}
+

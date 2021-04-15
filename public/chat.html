@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="/css/chat.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario productos</title>
+   
+</head>
+<body>
+    
+
+        <!-- CHAT-->
+        
+            <div class="container">
+                <form  id="formulario-chat"  class ="chat" action="">
+                <h2 style="color:#0b5fa5 ; text-align :center ; margin-top: 2%;">Chat</h2>
+                    <br>
+                    <input type="text" class="form-control" id="email" placeholder="Ingresa un email" required>
+                    <input id="mensaje" class="form-control"  placeholder="Escribe tu mensaje"></input>
+                    <input id="nombre" class="form-control"  placeholder="Escribe tu nombre"></input>        
+                    <input id="apellido" class="form-control"  placeholder="Escribe tu apellido"></input>
+                    <input id="edad" class="form-control"  placeholder="Escribe tu edad"></input>
+                    <input id="alias" class="form-control"  placeholder="Escribe tu alias"></input>
+                    <input id="imagen" class="form-control"  placeholder="ingresa una imagen"></input>
+                    <hr>
+                    <button class="btn btn-success">Enviar</button>
+                    <hr>
+                    <div id = "mostrarMensajes"></div>
+                  
+                </form>
+            </div>
+
+            
+
+<!--PARTE DE LOS SCRIPTS-->
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>
+
+</body>
+</html>
+
+
+
+
