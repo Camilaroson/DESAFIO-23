@@ -15,3 +15,4 @@ imagen: {type:String, require:true}
 })
 
 module.exports = mongoose.model(chatCollection , chatSchema)
+
