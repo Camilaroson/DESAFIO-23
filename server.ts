@@ -16,6 +16,14 @@ app.get('/chat',(req,res)=>{
     res.sendFile(__dirname+'/public/chat.html');
 })
 
+
+const util = require('util');
+
+function print(objeto:any){
+    console.log(util.inspect(objeto, false, 12, true));
+};
+
+
 //socket
 io.on('connection', (socket:any) => {
 
@@ -24,14 +32,17 @@ io.on('connection', (socket:any) => {
         io.emit('mensaje del chat',data)
         const saveChat = new chatModel(data)
         saveChat.save()
+
         //normalizr
         const usuarios = new schema.Entity('usuarios');
         const mensajesSchema = new schema.Entity('mensajes')
-        const postSchema = new schema.Entity('canal de chat',{
-            author:usuarios,
+        const postSchema = new schema.Entity('chat',{
+            usuarios:usuarios,
             mensaje: mensajesSchema
         })
+
         const Normalizar = normalize(data,[postSchema]);
+        print(Normalizar)
         console.log(JSON.stringify(Normalizar))
     
     })
@@ -39,7 +50,7 @@ io.on('connection', (socket:any) => {
 })
 
 
-//VER COMO ARREGLAR EL TEMA DE CONVERTIR A JSON LOS DATOS DE MONGO. 
+
 
 
 //conexión
